@@ -5,15 +5,21 @@ A web-based application that allows customers to easily file and track insurance
 # Features
 
    . Claim Submission: File a new insurance claim with a description and claim type.
+   
    . Claim Tracking: Track submitted claims using a unique Claim ID.
+   
    . Chatbot Integration: Chat with a basic AI chatbot to get support and guidance.
+   
    . Knowledge Base Search: Search through a collection of FAQs and common topics.
+   
    . Local Storage: Stores claim data locally to simulate backend functionality.
 
 # Technologies Used
 
    . HTML5 for structuring the content.
+   
    . CSS3 for styling and layout.
+   
    . JavaScript for adding interactivity, form handling, and DOM manipulation.
 
 
