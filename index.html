@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Claims Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Insurance Customer Self-Service Portal</h1>
+        <nav>
+            <button id="fileClaimBtn" class="nav-button"><i class="fas fa-file-alt"></i> File a Claim</button>
+            <button id="trackClaimsBtn" class="nav-button"><i class="fas fa-search"></i> Track Claims</button>
+            <button id="chatbotBtn" class="nav-button"><i class="fas fa-comments"></i> Chatbot</button>
+            <input type="text" id="searchBar" placeholder="Search Knowledge Base" class="search-bar">
+        </nav>
+    </header>
+
+    <main>
+        <section id="recentClaims" class="content-section">
+            <h2>Recent Claims</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Claim Number</th>
+                        <th>Status</th>
+                        <th>Date Submitted</th>
+                    </tr>
+                </thead>
+                <tbody id="claimsTableBody"></tbody>
+            </table>
+        </section>
+
+        <section id="claimForm" class="content-section" style="display:none;">
+            <h2>Submit a New Insurance Claim</h2>
+            <form id="submissionForm" novalidate>
+                <div class="form-group">
+                    <label for="policyNumber">Policy Number:</label>
+                    <input type="text" id="policyNumber" required placeholder="Enter your policy number">
+                </div>
+                <div class="form-group">
+                    <label for="incidentDate">Incident Date:</label>
+                    <input type="date" id="incidentDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="incidentDescription">Incident Description:</label>
+                    <textarea id="incidentDescription" required placeholder="Describe the incident in detail"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="fileUpload">Attach Files:</label>
+                    <input type="file" id="fileUpload" accept="image/*,application/pdf">
+                </div>
+                <button type="submit" class="submit-button">Submit Claim</button>
+            </form>
+            <div id="submissionMessage" class="submission-message"></div>
+        </section>
+        
+        <section id="chatbot" class="content-section" style="display:none;">
+            <h2>Chat with Us (AI-Powered Chatbot)</h2>
+            <div id="chatArea" class="chat-area"></div>
+            <div class="chat-input-container">
+                <input type="text" id="chatInput" placeholder="Ask a question..." class="chat-input">
+                <button id="sendChat" class="chat-button">Send</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Insurance Company. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
